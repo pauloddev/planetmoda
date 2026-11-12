@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planet Moda | Moda Feminina em Mangabeira – João Pessoa</title>
+<meta name="description" content="Conheça a Planet Moda, loja de moda feminina em Mangabeira, João Pessoa. Descubra novidades, conheça nossas peças e fale com nossa equipe pelo WhatsApp.">
+<meta name="theme-color" content="#F893AF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Planet Moda">
+<meta property="og:title" content="Planet Moda | Moda Feminina em Mangabeira – João Pessoa">
+<meta property="og:description" content="Loja de moda feminina em Mangabeira, João Pessoa. Veja as novidades e fale com a Planet Moda pelo WhatsApp.">
+<meta property="og:image" content="https://raw.githubusercontent.com/pauloddev/planetmoda/main/assets/img/marca/og-capa.jpg">
+<meta property="og:image:alt" content="Logo da Planet Moda">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pauloddev/planetmoda/main/assets/img/marca/og-capa.jpg">
+<link rel="icon" type="image/png" href="assets/img/marca/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/marca/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/agelast-pm.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/looks/hero.webp" as="image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ClothingStore","name":"Planet Moda",
+"image":"assets/img/marca/fachada.webp","telephone":"+55 83 98702-8876",
+"address":{"@type":"PostalAddress","streetAddress":"R. Josefa Taveira, 88","addressLocality":"João Pessoa","addressRegion":"PB","postalCode":"58058-028","addressCountry":"BR"},
+"geo":{"@type":"GeoCoordinates","latitude":-7.1721214,"longitude":-34.8397317},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:30","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:00","closes":"13:00"}],
+"sameAs":["https://www.instagram.com/planetmoda_jp/"]}
+</script>
+<style>
+@font-face{font-family:"Agelast PM";src:url(assets/fonts/agelast-pm.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(assets/fonts/dm-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(assets/fonts/dm-sans-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+
+:root{
+  --rosa:#F893AF; --branco:#FDFDFD;
+  --rosa-tinta:#B2486A;   /* apoio: texto corrido sobre branco */
+  --rosa-claro:#FDE9EF;   /* apoio: superfícies discretas */
+  --rosa-sombra:#E77C9B;  /* apoio: profundidade dentro do rosa */
+  --serif:"Agelast PM","DM Sans",system-ui,sans-serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(1.25rem,5vw,4.5rem);
+  --max:1240px;
+  --ease:cubic-bezier(.22,.7,.18,1);
+  --sec:clamp(5rem,11vw,9.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:1rem;line-height:1.65;color:var(--rosa-tinta);background:var(--branco);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.18;margin:0;letter-spacing:.07em;font-synthesis:none;-webkit-text-stroke:.6px currentColor}
+p{margin:0}
+.i{width:1.15em;height:1.15em;flex:none}
+:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--branco);color:var(--rosa-tinta);padding:.8rem 1.2rem;z-index:200}
+.skip:focus{left:1rem;top:1rem}
+.wrap{width:min(var(--max),100% - 2*var(--pad));margin-inline:auto}
+
+/* ---------- seções: alternância rosa / branco ---------- */
+.sec{position:relative;padding-block:var(--sec)}
+.sec--rosa{background:var(--rosa);color:var(--branco)}
+.sec--branco{background:var(--branco);color:var(--rosa-tinta)}
+.sec--branco .title{color:var(--rosa)}
+.head{text-align:center;max-width:46rem;margin:0 auto clamp(2.8rem,6vw,4.5rem)}
+.kicker{font-family:var(--sans);font-weight:500;text-transform:uppercase;font-size:clamp(.68rem,.9vw,.76rem);letter-spacing:.2em;display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.1rem;opacity:.95}
+.kicker::before,.kicker::after{content:"";width:1.6rem;height:1px;background:currentColor;opacity:.6}
+.title{font-size:clamp(1.75rem,3.9vw,3.4rem)}
+.lead{font-size:clamp(1.02rem,1.25vw,1.12rem);max-width:38rem;margin:1.4rem auto 0}
+.sec--rosa .lead,.sec--rosa p{font-weight:500}
+.star{display:inline-block;width:.9rem;height:.9rem;background:currentColor;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+
+/* ---------- botões ---------- */
+.btn{--h:3.4rem;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:var(--h);padding:0 2rem;font:500 .8rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease),box-shadow .45s var(--ease);position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--branco{background:var(--branco);color:var(--rosa-tinta)}
+.btn--branco:hover{box-shadow:0 14px 34px -16px rgba(120,30,60,.55)}
+.btn--linha-branca{border-color:rgba(253,253,253,.85);color:var(--branco)}
+.btn--linha-branca:hover{background:var(--branco);color:var(--rosa-tinta)}
+.btn--rosa{background:var(--rosa);color:var(--branco)}
+.btn--rosa:hover{background:var(--rosa-sombra);box-shadow:0 14px 34px -16px rgba(178,72,106,.7)}
+.btn--linha-rosa{border-color:var(--rosa);color:var(--rosa-tinta)}
+.btn--linha-rosa:hover{background:var(--rosa);color:var(--branco)}
+.btns{display:flex;flex-wrap:wrap;gap:1rem}
+
+/* ---------- intro ---------- */
+.intro{position:fixed;inset:0;z-index:150;background:var(--rosa);display:grid;place-items:center;transition:clip-path 1.3s var(--ease),visibility 0s 1.3s;clip-path:inset(0 0 0 0)}
+.intro.out{clip-path:inset(0 0 100% 0);visibility:hidden}
+.intro-logo{position:relative;width:min(56vw,340px)}
+.intro-logo img{width:100%;opacity:0;transform:scale(.9);filter:blur(10px);animation:logoIn 1.6s var(--ease) .25s forwards}
+.intro-ring{position:absolute;inset:-22% -16%;}
+.intro-ring ellipse{fill:none;stroke:var(--branco);stroke-width:.6;stroke-dasharray:420;stroke-dashoffset:420;animation:ring 1.8s var(--ease) .5s forwards;opacity:.75}
+.intro-tag{position:absolute;left:0;right:0;bottom:-3.2rem;text-align:center;color:var(--branco);font-family:var(--serif);font-size:.9rem;letter-spacing:.17em;opacity:0;animation:fadeUp 1s var(--ease) 1.3s forwards}
+@keyframes logoIn{to{opacity:1;transform:none;filter:none}}
+@keyframes ring{to{stroke-dashoffset:0}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto;z-index:90;color:var(--branco);transition:background .5s var(--ease),color .5s var(--ease),box-shadow .5s var(--ease),transform .5s var(--ease)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:5.6rem;gap:2rem}
+.hdr.solid{background:rgba(253,253,253,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--rosa-tinta);box-shadow:0 1px 0 rgba(248,147,175,.35)}
+.brand{display:block;height:3.3rem;position:relative;width:5.1rem}
+.brand img{position:absolute;inset:0;height:100%!important;width:auto;transition:opacity .5s var(--ease)}
+.brand .b-rosa{opacity:0}
+.hdr.solid .b-rosa{opacity:1} .hdr.solid .b-branco{opacity:0}
+.menu{display:flex;gap:2.4rem;font-size:.86rem;letter-spacing:.06em}
+.menu a{position:relative;padding-block:.4rem}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.hdr .btn{--h:2.8rem;padding:0 1.3rem;font-size:.72rem}
+.hdr .btn--branco{background:var(--branco);color:var(--rosa-tinta)}
+.hdr.solid .btn--branco{background:var(--rosa);color:var(--branco)}
+.burger{display:none;width:2.8rem;height:2.8rem;border:0;background:none;color:inherit;cursor:pointer;position:relative}
+.burger span{position:absolute;left:.6rem;right:.6rem;height:1px;background:currentColor;transition:transform .45s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:1.05rem} .burger span:nth-child(2){top:1.75rem}
+.nav-open .burger span:nth-child(1){transform:translateY(.35rem) rotate(45deg)}
+.nav-open .burger span:nth-child(2){transform:translateY(-.35rem) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:85;background:var(--rosa);color:var(--branco);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2.2rem;clip-path:circle(0% at calc(100% - 2.6rem) 2.8rem);transition:clip-path .8s var(--ease);visibility:hidden}
+.nav-open .drawer{clip-path:circle(150% at calc(100% - 2.6rem) 2.8rem);visibility:visible}
+.drawer a{font-family:var(--serif);font-size:1.5rem;letter-spacing:.11em}
+.nav-open .hdr{color:var(--branco);background:transparent;box-shadow:none}
+.nav-open .hdr .b-rosa{opacity:0} .nav-open .hdr .b-branco{opacity:1}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;padding:8rem 0 5rem;display:flex;align-items:center;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.hero h1{font-size:clamp(2.2rem,4.7vw,4.3rem);line-height:1.12}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln > span{display:block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+.hero h1 em{font-style:normal}
+.hero .sub{max-width:30rem;margin:2rem 0 2.6rem;font-size:1.08rem;font-weight:500}
+.hero .kicker{margin-bottom:1.8rem}
+.hero .kicker::before{display:none}
+.hero-fade{opacity:0;transform:translateY(18px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.ready .hero h1 .ln > span{transform:none}
+.ready .hero-fade{opacity:1;transform:none}
+.ready .hero h1 .ln:nth-child(2) > span{transition-delay:.12s}
+.ready .hero h1 .ln:nth-child(3) > span{transition-delay:.24s}
+.ready .hero-fade.d1{transition-delay:.45s} .ready .hero-fade.d2{transition-delay:.6s} .ready .hero-fade.d3{transition-delay:.75s}
+
+/* moldura de espelho oval com LED, o elemento memorável */
+.mirror{position:relative;border-radius:18px;padding:.6rem;isolation:isolate}
+.mirror::before{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(253,253,253,.95);box-shadow:0 0 18px rgba(253,253,253,.7),0 0 60px rgba(253,253,253,.35),inset 0 0 18px rgba(253,253,253,.45);z-index:-1}
+.mirror .m-in{border-radius:12px;overflow:hidden;height:100%}
+.mirror img{width:100%;height:100%;object-fit:cover}
+.sec--branco .mirror::before{border-color:var(--rosa);box-shadow:0 0 18px rgba(248,147,175,.55),0 0 60px rgba(248,147,175,.25),inset 0 0 14px rgba(248,147,175,.35)}
+.hero-art{position:relative;justify-self:center;width:min(100%,30rem)}
+.hero-art .mirror{aspect-ratio:3/4.35;opacity:0;transform:translateY(40px) scale(.97);transition:opacity 1.4s var(--ease) .3s,transform 1.6s var(--ease) .3s}
+.ready .hero-art .mirror{opacity:1;transform:none}
+.hero-art .mirror img{transform:scale(1.12);transition:transform 2.6s var(--ease) .3s}
+.ready .hero-art .mirror img{transform:scale(1)}
+.hero-art .s1,.hero-art .s2,.hero-art .s3{position:absolute;color:var(--branco);animation:twinkle 3.4s ease-in-out infinite}
+.hero-art .s1{top:6%;left:-6%;width:1.6rem;height:1.6rem}
+.hero-art .s2{bottom:14%;right:-7%;width:1.1rem;height:1.1rem;animation-delay:1.2s}
+.hero-art .s3{top:44%;right:-4%;width:.7rem;height:.7rem;animation-delay:2.1s}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+.scroll-cue{position:absolute;left:50%;bottom:1.6rem;translate:-50% 0;width:1px;height:3.4rem;background:rgba(253,253,253,.4);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-40%;width:100%;height:40%;background:var(--branco);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{to{top:100%}}
+
+/* ---------- marca ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,7vw,7rem);align-items:center}
+.split .mirror{aspect-ratio:3/4.2;width:min(100%,27rem);justify-self:center}
+.prose .title{margin-bottom:2rem;font-size:clamp(1.65rem,3.1vw,2.8rem)}
+.prose p+p{margin-top:1.1rem}
+.prose p{max-width:34rem}
+.sig{margin-top:2.6rem;padding-top:2rem;border-top:1px solid rgba(248,147,175,.45);display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.sig strong{font-family:var(--serif);font-weight:400;font-size:1.5rem;letter-spacing:.09em;color:var(--rosa)}
+.sig span{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- categorias ---------- */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem)}
+.cat{display:flex;flex-direction:column;align-items:center;text-align:center}
+.cat-img{display:block;width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--rosa-sombra)}
+.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.cat:hover .cat-img img{transform:scale(1.06)}
+.cat-name{font-family:var(--serif);letter-spacing:.11em;font-size:clamp(1.15rem,1.7vw,1.55rem);margin-top:1.1rem;line-height:1}
+.cat-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;opacity:.9}
+.cat-cta .i{transition:transform .5s var(--ease)}
+.cat:hover .cat-cta .i{transform:translateX(4px)}
+.sub-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin:clamp(4.5rem,9vw,7rem) 0 2rem}
+.sub-head h3{font-size:clamp(1.4rem,2.5vw,2.1rem)}
+.sub-head p{max-width:24rem;font-size:.95rem}
+
+/* ---------- carrosséis ---------- */
+.carousel{--per:4;--gap:clamp(.9rem,1.6vw,1.4rem);position:relative}
+.track{display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;scroll-behavior:smooth;outline:none}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 calc((100% - (var(--per) - 1)*var(--gap))/var(--per));scroll-snap-align:start}
+.card{margin:0;aspect-ratio:3/4;overflow:hidden;background:var(--rosa-claro)}
+.sec--rosa .card{background:var(--rosa-sombra)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.card:hover img{transform:scale(1.05)}
+.car-nav{display:flex;align-items:center;gap:1.4rem;margin-top:1.8rem}
+.car-btn{width:3rem;height:3rem;flex:none;display:grid;place-items:center;border:1px solid currentColor;background:none;color:inherit;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease)}
+.sec--rosa .car-btn:hover{background:var(--branco);color:var(--rosa-tinta)}
+.sec--branco .car-btn{color:var(--rosa)}
+.sec--branco .car-btn:hover{background:var(--rosa);color:var(--branco)}
+.car-bar{flex:1;height:1px;background:currentColor;opacity:.35;position:relative}
+.sec--branco .car-bar{color:var(--rosa)}
+.car-bar span{position:absolute;left:0;top:-1px;height:3px;width:20%;background:currentColor;transition:left .5s var(--ease),width .5s var(--ease)}
+.carousel .car-bar{opacity:1;background:rgba(253,253,253,.35)}
+.sec--branco .carousel .car-bar{background:rgba(248,147,175,.3)}
+.cta-row{display:flex;justify-content:center;margin-top:clamp(2.6rem,5vw,3.6rem)}
+
+/* vídeos */
+.carousel--video{--per:4}
+.vcard{margin:0;position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--rosa-claro)}
+.vcard video{width:100%;height:100%;object-fit:cover}
+.vplay{position:absolute;right:.8rem;bottom:.8rem;width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid rgba(253,253,253,.9);background:rgba(248,147,175,.55);backdrop-filter:blur(6px);color:var(--branco);display:grid;place-items:center;cursor:pointer}
+.vplay .i{grid-area:1/1}
+.vplay .i:last-child{display:none}
+.vcard.paused .vplay .i:first-child{display:none}
+.vcard.paused .vplay .i:last-child{display:block}
+
+/* ---------- vista quem você é ---------- */
+.tri{display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:clamp(1.5rem,4vw,4rem);align-items:center}
+.tri .mirror{aspect-ratio:3/4.4}
+.tri-txt{text-align:center}
+.tri-txt .title{font-size:clamp(1.8rem,3.2vw,3rem);margin-bottom:1.8rem}
+.tri-txt p{font-size:1.1rem;max-width:22rem;margin:0 auto 2.4rem}
+
+/* ---------- planet gatas ---------- */
+.gatas{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:clamp(.9rem,1.6vw,1.4rem);height:clamp(34rem,62vw,46rem)}
+.gatas figure{margin:0;overflow:hidden;background:var(--rosa-sombra);position:relative}
+.gatas figure:first-child{grid-row:1/3}
+.gatas figure:first-child img{object-position:center 18%}
+.gatas img{width:100%;height:100%!important;object-fit:cover;transition:transform 1.4s var(--ease)}
+.gatas figure:hover img{transform:scale(1.04)}
+.gatas-car{margin-top:clamp(.9rem,1.6vw,1.4rem)}
+.gatas-car .carousel{--per:5}
+.tag-ig{display:inline-flex;align-items:center;gap:.6rem;font-size:.85rem;letter-spacing:.08em;margin-top:1.6rem;border-bottom:1px solid currentColor;padding-bottom:.2rem}
+
+/* ---------- passos ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,3vw,2.6rem);counter-reset:s}
+.step{text-align:center;padding:clamp(2.2rem,4vw,3.2rem) clamp(1.4rem,2.6vw,2.4rem);border:1px solid rgba(248,147,175,.45);position:relative;background:var(--branco);transition:border-color .5s var(--ease),transform .6s var(--ease)}
+.step:hover{border-color:var(--rosa);transform:translateY(-4px)}
+.step-n{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--rosa);font-weight:300}
+.step-n{display:block}
+.step .i{display:block;width:2rem;height:2rem;color:var(--rosa);margin:1.2rem auto 1.4rem}
+.step h3{font-size:1.15rem;color:var(--rosa);margin-bottom:.8rem;line-height:1.1}
+.step p{font-size:.95rem}
+
+/* ---------- diferenciais ---------- */
+.difs{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(253,253,253,.45);border:1px solid rgba(253,253,253,.45)}
+.dif{background:var(--rosa);padding:clamp(2rem,3vw,2.8rem) 1.5rem;text-align:center;transition:background .5s var(--ease)}
+.dif:hover{background:var(--rosa-sombra)}
+.dif .i{display:block;width:1.9rem;height:1.9rem;margin:0 auto 1.3rem}
+.dif h3{font-size:1.05rem;margin-bottom:.8rem;line-height:1.05}
+.dif p{font-size:.92rem}
+
+/* ---------- localização ---------- */
+.loja{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.loja .mirror{aspect-ratio:3/4.1;width:min(100%,28rem);justify-self:center}
+.loja-info .title{font-size:clamp(1.65rem,3.1vw,2.8rem);margin-bottom:2rem}
+.addr{display:flex;gap:.9rem;align-items:flex-start;font-size:1.05rem}
+.addr .i{color:var(--rosa);margin-top:.25rem}
+.hours{margin:2.2rem 0;border-top:1px solid rgba(248,147,175,.45)}
+.hours-h{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0}
+.hours-h strong{font-family:var(--serif);font-size:1.1rem;letter-spacing:.09em;font-weight:400;color:var(--rosa);display:flex;gap:.7rem;align-items:center}
+.status{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.5rem}
+.status::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:#C9A9B3}
+.status.open::before{background:#3DBE7A;box-shadow:0 0 0 4px rgba(61,190,122,.18)}
+.hours li{display:flex;justify-content:space-between;padding:.62rem 0;border-bottom:1px solid rgba(248,147,175,.25);font-size:.98rem}
+.hours li.today{color:var(--rosa);font-weight:500}
+.map{margin-top:clamp(4.5rem,8vw,6.5rem);position:relative;aspect-ratio:21/8;border:1px solid rgba(248,147,175,.55);border-radius:18px;padding:.6rem;box-shadow:0 0 18px rgba(248,147,175,.35)}
+.map-in{position:relative;width:100%;height:100%;border-radius:12px;overflow:hidden;background:var(--rosa-claro)}
+.map-stage{position:absolute;inset:0}
+.map-art{position:absolute;inset:0;width:100%;height:100%}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .8s var(--ease)}
+.map.live iframe{opacity:1}
+.map-pin{position:absolute;left:62%;top:46%;transform:translate(-50%,-100%);color:var(--rosa);filter:drop-shadow(0 8px 10px rgba(178,72,106,.35))}
+.map.live .map-pin{display:none}
+.map-pin svg{width:3.2rem;height:3.2rem}
+.map-pin::after{content:"";position:absolute;left:50%;bottom:-.35rem;width:1rem;height:.4rem;translate:-50% 0;border-radius:50%;background:rgba(178,72,106,.3);animation:pulse 2.4s var(--ease) infinite}
+.map-card{position:absolute;left:clamp(.8rem,2.4vw,2rem);top:50%;transform:translateY(-50%);background:var(--branco);padding:clamp(1.3rem,2.4vw,2rem);width:min(22rem,calc(100% - 1.6rem));box-shadow:0 20px 40px -22px rgba(120,30,60,.45);border:1px solid rgba(248,147,175,.45);z-index:2}
+.map-card h3{font-size:1.15rem;color:var(--rosa);margin-bottom:.8rem}
+.map-card p{font-size:.95rem;margin-bottom:1.3rem}
+.map-card .btns{gap:.6rem}
+.map-card .btn{--h:2.9rem;padding:0 1.1rem;font-size:.68rem}
+
+/* ---------- cta final + rodapé ---------- */
+.final{text-align:center;overflow:hidden}
+.final .logo-f{width:min(46vw,15rem);margin:0 auto 2.6rem}
+.final .title{font-size:clamp(1.9rem,4.4vw,4rem);max-width:20ch;margin:0 auto}
+.final p{margin:1.6rem auto 2.8rem;font-size:1.1rem;max-width:30rem}
+.ftr{background:var(--branco);color:var(--rosa-tinta);padding:clamp(3.5rem,7vw,5rem) 0 2rem;font-size:.92rem}
+.ftr-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2.5rem}
+.ftr h4{font-family:var(--serif);font-weight:400;font-size:1.05rem;letter-spacing:.11em;color:var(--rosa);margin:0 0 1rem}
+.ftr li+li{margin-top:.55rem}
+.ftr a:hover{color:var(--rosa)}
+.ftr .logo-ft{width:7.5rem}
+.ftr .soc{display:flex;gap:.7rem;margin-top:1.4rem}
+.ftr .soc a{width:2.6rem;height:2.6rem;border:1px solid var(--rosa);display:grid;place-items:center;color:var(--rosa);transition:background .4s,color .4s}
+.ftr .soc a:hover{background:var(--rosa);color:var(--branco)}
+.ftr-bot{margin-top:3rem;padding-top:1.6rem;border-top:1px solid rgba(248,147,175,.4);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8rem}
+
+/* ---------- whatsapp flutuante ---------- */
+.fab{position:fixed;right:clamp(1rem,2.4vw,1.8rem);bottom:clamp(1rem,2.4vw,1.8rem);z-index:80;width:3.6rem;height:3.6rem;border-radius:50%;background:var(--rosa);color:var(--branco);display:grid;place-items:center;box-shadow:0 0 0 3px var(--branco),0 16px 30px -10px rgba(120,30,60,.5);transition:transform .5s var(--ease),opacity .5s;opacity:0;transform:scale(.6);pointer-events:none}
+.fab.show{opacity:1;transform:none;pointer-events:auto}
+.fab:hover{transform:scale(1.07)}
+.fab .i{width:1.7rem;height:1.7rem}
+.fab::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:1px solid var(--rosa);animation:pulse 2.8s var(--ease) infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+
+/* ---------- revelações ao rolar ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-img{clip-path:inset(8% 8% 8% 8% round 18px);opacity:0;transition:clip-path 1.6s var(--ease),opacity 1.2s var(--ease)}
+.reveal-img.in{clip-path:inset(0 0 0 0 round 18px);opacity:1}
+.cats .cat:nth-child(3n+2),.steps .step:nth-child(2),.difs .dif:nth-child(2){transition-delay:.12s}
+.cats .cat:nth-child(3n+3),.steps .step:nth-child(3),.difs .dif:nth-child(3){transition-delay:.24s}
+.difs .dif:nth-child(4){transition-delay:.36s} .difs .dif:nth-child(5){transition-delay:.48s}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1080px){
+  .menu{gap:1.5rem}
+  .difs{grid-template-columns:repeat(3,1fr)}
+  .difs .dif:nth-child(4),.difs .dif:nth-child(5){grid-column:span 1}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+  .carousel{--per:3} .carousel--video{--per:3} .gatas-car .carousel{--per:4}
+}
+@media (max-width:900px){
+  .menu,.hdr .hdr-cta{display:none}
+  .burger{display:block}
+  .hero{padding-top:7rem}
+  .hero-grid,.split,.loja{grid-template-columns:1fr}
+  .hero-copy{text-align:center}
+  .hero .kicker{justify-content:center}
+  .hero .kicker::before{display:block}
+  .hero .sub{margin-inline:auto}
+  .hero .btns{justify-content:center}
+  .hero-art{width:min(82%,24rem)}
+  .split .mirror{order:-1;width:min(78%,22rem)}
+  .prose{text-align:center} .prose p{margin-inline:auto} .sig{justify-content:center}
+  .tri{grid-template-columns:1fr 1fr}
+  .tri-txt{grid-column:1/-1;order:-1}
+  .steps{grid-template-columns:1fr}
+  .loja .mirror{width:min(78%,22rem)}
+  .loja-info{text-align:center} .addr{justify-content:center;text-align:left} .loja-info .btns{justify-content:center}
+  .map{aspect-ratio:auto}
+  .map-in{height:auto;display:flex;flex-direction:column}
+  .map-in .map-stage{position:relative;aspect-ratio:4/3}
+  .map-card{position:relative;left:auto;top:auto;transform:none;width:100%;box-shadow:none;border:0;border-top:1px solid rgba(248,147,175,.45);text-align:center}
+  .map-card .btns{justify-content:center}
+  .sub-head{flex-direction:column;align-items:center;text-align:center}
+}
+@media (max-width:640px){
+  .cats{grid-template-columns:1fr 1fr}
+  .cat-cta{font-size:.62rem;letter-spacing:.1em}
+  .carousel{--per:1.6} .carousel--video{--per:1.7} .gatas-car .carousel{--per:2.3}
+  .gatas{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+  .gatas figure:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:4/3.4}
+  .gatas figure:not(:first-child){aspect-ratio:3/4}
+  .difs{grid-template-columns:1fr 1fr}
+  .difs .dif:last-child{grid-column:1/-1}
+  .ftr-grid{grid-template-columns:1fr;text-align:center}
+  .ftr .logo-ft{margin:0 auto} .ftr .soc{justify-content:center}
+  .ftr-bot{justify-content:center;text-align:center}
+  .btns{flex-direction:column;align-items:stretch}
+  .btn{padding:0 1.2rem}
+  .hours-h{flex-direction:column;gap:.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal,.reveal-img{opacity:1;transform:none;clip-path:none}
+}
+</style>
+</head>
+<body class="locked">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-logo">
+    <svg class="intro-ring" viewBox="0 0 200 140" preserveAspectRatio="none"><ellipse cx="100" cy="70" rx="98" ry="68"/></svg>
+    <img src="assets/img/marca/logo-branco.png" alt="" width="932" height="602">
+    <p class="intro-tag">moda, personalidade e autenticidade</p>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#topo" aria-label="Planet Moda, início">
+      <img class="b-branco" src="assets/img/marca/logo-branco.png" alt="Planet Moda" width="932" height="602">
+      <img class="b-rosa" src="assets/img/marca/logo-rosa.png" alt="" width="932" height="602">
+    </a>
+    <nav aria-label="Principal"><ul class="menu"><li><a href="#marca">A marca</a></li><li><a href="#estilo">Estilos</a></li><li><a href="#novidades">Novidades</a></li><li><a href="#gatas">Planet Gatas</a></li><li><a href="#loja">A loja</a></li></ul></nav>
+    <a class="btn btn--branco hdr-cta" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Menu móvel">
+  <a href="#marca">A marca</a><a href="#estilo">Estilos</a><a href="#novidades">Novidades</a><a href="#gatas">Planet Gatas</a><a href="#loja">A loja</a>
+  <a class="btn btn--branco" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener" style="font-size:.8rem;font-family:var(--sans)"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Falar pelo WhatsApp</a>
+</nav>
+
+<main id="conteudo">
+
+<!-- 01 HERO -->
+<section class="sec sec--rosa hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker hero-fade">Moda feminina em Mangabeira, João Pessoa</p>
+      <h1><span class="ln"><span>Seu estilo</span></span><span class="ln"><span>merece ser</span></span><span class="ln"><span><em>protagonista.</em></span></span></h1>
+      <p class="sub hero-fade d1">Descubra novas possibilidades, encontre peças que combinam com sua personalidade e transforme cada escolha em uma expressão do seu estilo.</p>
+      <div class="btns hero-fade d2">
+        <a class="btn btn--branco" href="#novidades">Conhecer as novidades</a>
+        <a class="btn btn--linha-branca" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Falar pelo WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="mirror"><div class="m-in"><img src="assets/img/looks/hero.webp" alt="Modelo com vestido preto de um ombro só em frente ao neon da Planet Moda" width="1200" height="1600" fetchpriority="high"></div></div>
+      <span class="star s1"></span><span class="star s2"></span><span class="star s3"></span>
+    </div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<!-- 02 MARCA -->
+<section class="sec sec--branco" id="marca">
+  <div class="wrap split">
+    <div class="mirror reveal-img"><div class="m-in"><img src="assets/img/marca/edinha-santos.webp" alt="Edinha Santos, CEO da Planet Moda" width="900" height="1200" loading="lazy" decoding="async" class=""></div></div>
+    <div class="prose">
+      <p class="kicker reveal">A Planet Moda</p>
+      <h2 class="title reveal">Mais que moda, uma forma de expressar quem você é.</h2>
+      <p class="reveal">A Planet Moda nasceu para a mulher que usa a roupa como linguagem. Cada peça que chega à loja é escolhida para valorizar quem a veste, do look de todo dia à produção para uma noite especial.</p>
+      <p class="reveal">Em Mangabeira, a loja recebe você num ambiente pensado para provar com calma, combinar sem pressa e sair com a sensação de ter encontrado algo que é a sua cara.</p>
+      <div class="sig reveal"><strong>Edinha Santos</strong><span>CEO da Planet Moda</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ESTILOS -->
+<section class="sec sec--rosa" id="estilo">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker reveal">Universo Planet</p>
+      <h2 class="title reveal">Encontre seu estilo.</h2>
+      <p class="lead reveal">Toque numa categoria e fale com a equipe sobre as peças disponíveis.</p>
+    </div>
+    <div class="cats"><a class="cat reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20no%20site%20e%20quero%20ver%20os%20vestidos%20da%20Planet%20Moda." target="_blank" rel="noopener">
+  <span class="cat-img"><img src="assets/img/produtos/longos-manequins.webp" alt="Vestidos longos de alcinha em preto, marrom, off-white e vinho nos manequins da loja" width="900" height="1200" loading="lazy" decoding="async" class=""></span>
+  <span class="cat-name">Vestidos</span>
+  <span class="cat-cta">Pedir pelo WhatsApp <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></svg></span>
+</a><a class="cat reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20no%20site%20e%20quero%20ver%20os%20conjuntos%20da%20Planet%20Moda." target="_blank" rel="noopener">
+  <span class="cat-img"><img src="assets/img/produtos/conjuntos-4.webp" alt="Conjuntos de top e saia em amarelo, vinho, off-white e azul nos manequins" width="900" height="1200" loading="lazy" decoding="async" class=""></span>
+  <span class="cat-name">Conjuntos</span>
+  <span class="cat-cta">Pedir pelo WhatsApp <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></svg></span>
+</a><a class="cat reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20no%20site%20e%20quero%20ver%20os%20corsets%20da%20Planet%20Moda." target="_blank" rel="noopener">
+  <span class="cat-img"><img src="assets/img/produtos/corsets-poa.webp" alt="Corsets de poá em branco, preto, azul e rosa" width="900" height="1200" loading="lazy" decoding="async" class=""></span>
+  <span class="cat-name">Corsets</span>
+  <span class="cat-cta">Pedir pelo WhatsApp <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></svg></span>
+</a><a class="cat reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20no%20site%20e%20quero%20ver%20as%20blusas%20da%20Planet%20Moda." target="_blank" rel="noopener">
+  <span class="cat-img"><img src="assets/img/produtos/blusas-cabide.webp" alt="Blusas leves em off-white, rosa, preto e amarelo nos cabides" width="900" height="1200" loading="lazy" decoding="async" class=""></span>
+  <span class="cat-name">Blusas</span>
+  <span class="cat-cta">Pedir pelo WhatsApp <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></svg></span>
+</a><a class="cat reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20no%20site%20e%20quero%20ver%20as%20pe%C3%A7as%20jeans%20da%20Planet%20Moda." target="_blank" rel="noopener">
+  <span class="cat-img"><img src="assets/img/produtos/jeans.webp" alt="Shorts jeans com etiqueta Planet Moda sobre a mesa da loja" width="900" height="1200" loading="lazy" decoding="async" class=""></span>
+  <span class="cat-name">Jeans</span>
+  <span class="cat-cta">Pedir pelo WhatsApp <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></svg></span>
+</a><a class="cat reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20no%20site%20e%20quero%20ver%20as%20bolsas%20da%20Planet%20Moda." target="_blank" rel="noopener">
+  <span class="cat-img"><img src="assets/img/produtos/bolsas-mao.webp" alt="Mão segurando bolsas de corrente em prata, preto e dourado" width="900" height="1200" loading="lazy" decoding="async" class=""></span>
+  <span class="cat-name">Bolsas</span>
+  <span class="cat-cta">Pedir pelo WhatsApp <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></svg></span>
+</a></div>
+    <div class="sub-head reveal">
+      <h3>Direto da arara</h3>
+      <p>Peças fotografadas na loja, para você ver tecido, cor e caimento.</p>
+    </div>
+    <div class="reveal">
+<div class="carousel " data-carousel id="car-arara" aria-roledescription="carrossel" aria-label="Peças da loja">
+  <ul class="track" tabindex="0"><li class="slide"><figure class="card"><img data-src="assets/img/produtos/vestidos-cabide.webp" alt="Vestidos coloridos pendurados na arara rosa" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/vestidos-cores.webp" alt="Quatro vestidos tomara que caia em preto, off-white, rosa e amarelo sobre o sofá de veludo" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/corsets-cereja.webp" alt="Corsets estampados com cerejas em amarelo, azul e rosa" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/corset-jeans.webp" alt="Corset de cerejas combinado com short jeans com brilho" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/conjuntos-manequins.webp" alt="Três conjuntos de saia e top em manequins" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/halter-azul.webp" alt="Peças frente única em azul e off-white nos cabides" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/peplum-cabide.webp" alt="Vestidos em azul, vermelho e preto pendurados" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/drapeado-cabide.webp" alt="Peças de alcinha em preto e rosé nos cabides" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/vestidos-cama.webp" alt="Vestidos drapeados em vermelho e off-white com detalhe dourado" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/produtos/bolsas.webp" alt="Bolsas de corrente dourada e prata sobre o puff" width="900" height="1200" decoding="async"></figure></li></ul>
+  <div class="car-nav">
+    <button class="car-btn" data-prev aria-label="Anterior"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5 8.5 12l6.5 6.5"/></svg></button>
+    <div class="car-bar"><span></span></div>
+    <button class="car-btn" data-next aria-label="Próximo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5.5 15.5 12 9 18.5"/></svg></button>
+  </div>
+</div></div>
+  </div>
+</section>
+
+<!-- 04 NOVIDADES -->
+<section class="sec sec--branco" id="novidades">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker reveal">Recém-chegadas</p>
+      <h2 class="title reveal">Novidades que combinam com você.</h2>
+      <p class="lead reveal">Looks montados na Planet Moda. Gostou de algum? Mande a foto no WhatsApp e a gente te mostra.</p>
+    </div>
+    <div class="reveal">
+<div class="carousel " data-carousel id="car-looks" aria-roledescription="carrossel" aria-label="Looks da Planet Moda">
+  <ul class="track" tabindex="0"><li class="slide"><figure class="card"><img data-src="assets/img/looks/look-vermelho-bolsa.webp" alt="Modelo com vestido vermelho de um ombro só e bolsa dourada" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-babados-rosa.webp" alt="Modelo com conjunto rosé de babados" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-capa-frente.webp" alt="Modelo com blusa capa branca e short jeans" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-amarelo-frente.webp" alt="Modelo com vestido midi amarelo tomara que caia" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-peplum.webp" alt="Modelo com blusa peplum off-white e short claro" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-vermelho.webp" alt="Modelo com vestido vermelho frente única" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-conjunto-amarelo.webp" alt="Modelo de costas com conjunto amarelo de calça pantalona" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-poa.webp" alt="Modelo com corset de poá" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-preto-costas.webp" alt="Modelo de costas com vestido preto curto" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-babados-costas.webp" alt="Modelo de costas com conjunto rosé de babados" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-amarelo-costas.webp" alt="Modelo de costas com vestido amarelo de alcinha" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-capa-costas.webp" alt="Modelo de costas com blusa capa branca" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-vermelho-costas.webp" alt="Modelo de costas com vestido vermelho com recorte" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-jeans.webp" alt="Modelo de costas com macacão jeans" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-renda-rosa.webp" alt="Body de renda rosa com jeans" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-renda-azul.webp" alt="Body de renda azul com jeans" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/looks/look-renda-preta.webp" alt="Body de renda preta com jeans" width="900" height="1200" decoding="async"></figure></li></ul>
+  <div class="car-nav">
+    <button class="car-btn" data-prev aria-label="Anterior"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5 8.5 12l6.5 6.5"/></svg></button>
+    <div class="car-bar"><span></span></div>
+    <button class="car-btn" data-next aria-label="Próximo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5.5 15.5 12 9 18.5"/></svg></button>
+  </div>
+</div></div>
+    <div class="cta-row reveal"><a class="btn btn--rosa" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20as%20novidades%20no%20site%20da%20Planet%20Moda%20e%20quero%20conhecer%20as%20pe%C3%A7as." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Quero conhecer as novidades</a></div>
+  </div>
+</section>
+
+<!-- 05 VISTA QUEM VOCÊ É -->
+<section class="sec sec--rosa" id="vista">
+  <div class="wrap tri">
+    <div class="mirror reveal-img"><div class="m-in"><img src="assets/img/looks/look-vermelho-inteiro.webp" alt="Modelo com vestido vermelho drapeado, bolsa e sandália dourados" width="900" height="1200" loading="lazy" decoding="async" class=""></div></div>
+    <div class="tri-txt">
+      <span class="star reveal" style="margin-bottom:1.6rem"></span>
+      <h2 class="title reveal">Vista quem você é.</h2>
+      <p class="reveal">Cada escolha conta uma história. Encontre peças que valorizam sua personalidade e fazem você se sentir ainda mais confiante.</p>
+      <a class="btn btn--branco reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Montar meu look</a>
+    </div>
+    <div class="mirror reveal-img"><div class="m-in"><img src="assets/img/looks/look-babados-frente.webp" alt="Modelo com conjunto rosé de babados e bolsa prata" width="900" height="1200" loading="lazy" decoding="async" class=""></div></div>
+  </div>
+</section>
+
+<!-- 05b VÍDEOS -->
+<section class="sec sec--branco" id="movimento">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker reveal">Em movimento</p>
+      <h2 class="title reveal">Veja o caimento de perto.</h2>
+      <p class="lead reveal">Vídeos gravados na loja, para você perceber o tecido e o movimento de cada peça.</p>
+    </div>
+    <div class="reveal">
+<div class="carousel carousel--video" data-carousel id="car-videos" aria-roledescription="carrossel" aria-label="Vídeos das peças">
+  <ul class="track" tabindex="0"><li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/babados-rosa.jpg" aria-label="Conjunto rosé de babados em movimento">
+    <source src="assets/video/babados-rosa.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/vermelho-drapeado.jpg" aria-label="Vestido vermelho drapeado em movimento">
+    <source src="assets/video/vermelho-drapeado.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/conjunto-amarelo.jpg" aria-label="Conjunto amarelo de corset e pantalona">
+    <source src="assets/video/conjunto-amarelo.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/capa-branca.jpg" aria-label="Blusa capa branca com short jeans">
+    <source src="assets/video/capa-branca.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/plissados.jpg" aria-label="Vestidos plissados na arara">
+    <source src="assets/video/plissados.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/corsets-cereja.jpg" aria-label="Corsets de cereja em detalhe">
+    <source src="assets/video/corsets-cereja.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/corsets-renda.jpg" aria-label="Corsets de renda em várias cores">
+    <source src="assets/video/corsets-renda.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/listrados.jpg" aria-label="Vestidos listrados nos cabides">
+    <source src="assets/video/listrados.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li>
+<li class="slide"><figure class="vcard">
+  <video muted loop playsinline preload="none" poster="assets/video/jeans-brilho.jpg" aria-label="Short jeans com brilho em detalhe">
+    <source src="assets/video/jeans-brilho.mp4" type="video/mp4"></video>
+  <button class="vplay" aria-label="Pausar vídeo" data-vtoggle><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 5.6v12.8M15.6 5.6v12.8"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.6v12.8L18.4 12Z" fill="currentColor" stroke="none"/></svg></button>
+</figure></li></ul>
+  <div class="car-nav">
+    <button class="car-btn" data-prev aria-label="Anterior"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5 8.5 12l6.5 6.5"/></svg></button>
+    <div class="car-bar"><span></span></div>
+    <button class="car-btn" data-next aria-label="Próximo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5.5 15.5 12 9 18.5"/></svg></button>
+  </div>
+</div></div>
+  </div>
+</section>
+
+<!-- PLANET GATAS -->
+<section class="sec sec--rosa" id="gatas">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker reveal">Clientes reais</p>
+      <h2 class="title reveal">Planet Gatas, quem veste indica.</h2>
+      <p class="lead reveal">Elas passaram pela loja, escolheram o look e mostraram o resultado.</p>
+    </div>
+    <div class="gatas">
+      <figure class="reveal"><img src="assets/img/clientes/cliente-grupo-loja.webp" alt="Quatro clientes sentadas no sofá da Planet Moda com sacolas da loja" width="900" height="1200" loading="lazy" decoding="async" class=""></figure>
+      <figure class="reveal"><img src="assets/img/clientes/cliente-lara.webp" alt="Cliente com vestido vinho de recortes no provador da Planet Moda" width="900" height="1200" loading="lazy" decoding="async" class=""></figure><figure class="reveal"><img src="assets/img/clientes/cliente-priscila.webp" alt="Cliente com conjunto rosa de manga longa e bolsa preta" width="900" height="1200" loading="lazy" decoding="async" class=""></figure>
+    </div>
+    <div class="gatas-car reveal">
+<div class="carousel " data-carousel id="car-gatas" aria-roledescription="carrossel" aria-label="Clientes da Planet Moda">
+  <ul class="track" tabindex="0"><li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-19.webp" alt="Cliente com top branco e sacola da Planet Moda no provador" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-16.webp" alt="Três clientes no provador segurando sacolas da Planet Moda" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-03.webp" alt="Cliente sorrindo com sacolas rosas da Planet Moda" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-06.webp" alt="Cliente com vestido rosa e sacolas da Planet Moda" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-maria.webp" alt="Cliente com look rosa claro" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-17.webp" alt="Cliente com look laranja e sacolas da loja" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-08.webp" alt="Cliente com vestido branco" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-jade.webp" alt="Cliente com conjunto rosé" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-07.webp" alt="Cliente com vestido preto de amarração" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-espelho-rosa.webp" alt="Cliente com vestido vinho no provador" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-11.webp" alt="Cliente com conjunto preto de couro" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-18.webp" alt="Cliente com vestido preto e sacola rosa da Planet Moda em frente ao neon da loja" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-10.webp" alt="Cliente com blusa preta e saia branca" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-maira.webp" alt="Cliente com conjunto azul em frente ao espelho" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-12.webp" alt="Cliente com conjunto branco" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-13.webp" alt="Cliente com conjunto branco de fenda" width="900" height="1200" decoding="async"></figure></li>
+<li class="slide"><figure class="card"><img data-src="assets/img/clientes/cliente-video-15.webp" alt="Cliente com conjunto branco na loja" width="900" height="1200" decoding="async"></figure></li></ul>
+  <div class="car-nav">
+    <button class="car-btn" data-prev aria-label="Anterior"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5 8.5 12l6.5 6.5"/></svg></button>
+    <div class="car-bar"><span></span></div>
+    <button class="car-btn" data-next aria-label="Próximo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5.5 15.5 12 9 18.5"/></svg></button>
+  </div>
+</div></div>
+    <div class="cta-row reveal"><a class="tag-ig" href="https://www.instagram.com/planetmoda_jp/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg> Marque @planetmoda_jp no seu look</a></div>
+  </div>
+</section>
+
+<!-- 06 EXPERIÊNCIA -->
+<section class="sec sec--branco" id="como">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker reveal">Simples assim</p>
+      <h2 class="title reveal">Seu próximo look começa aqui.</h2>
+    </div>
+    <ol class="steps" style="list-style:none;margin:0;padding:0">
+      <li class="step reveal"><span class="step-n">01</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 12S6 5.6 12 5.6 21.4 12 21.4 12 18 18.4 12 18.4 2.6 12 2.6 12Z"/><circle cx="12" cy="12" r="2.8"/></svg><h3>Descubra suas peças favoritas</h3><p>Veja as novidades aqui no site ou no Instagram e separe o que combina com você.</p></li><li class="step reveal"><span class="step-n">02</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10.2H9.6L5.6 19v-3.3H4Z"/><path d="M8 9.6h8M8 12.2h5"/></svg><h3>Converse com nossa equipe pelo WhatsApp</h3><p>Mande a foto da peça e tire suas dúvidas direto com a gente.</p></li><li class="step reveal"><span class="step-n">03</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.6a1.9 1.9 0 1 1 1.9-1.9c0 1-1 1.4-1.9 2.2v1.3L3.5 15.6a1.1 1.1 0 0 0 .7 2h15.6a1.1 1.1 0 0 0 .7-2L12 9.2"/></svg><h3>Escolha seu próximo look</h3><p>Combine as peças com calma e venha conhecer a loja em Mangabeira.</p></li>
+    </ol>
+    <div class="cta-row reveal"><a class="btn btn--rosa" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Falar pelo WhatsApp</a></div>
+  </div>
+</section>
+
+<!-- 07 DIFERENCIAIS -->
+<section class="sec sec--rosa" id="diferenciais">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker reveal">Por que a Planet</p>
+      <h2 class="title reveal">Uma experiência que faz diferença.</h2>
+    </div>
+    <ul class="difs">
+      <li class="dif reveal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9.2 3.2 8.4 7.6l1.6 2.6L6 20.8h12L14 10.2l1.6-2.6-.8-4.4"/><path d="M9.2 3.2c.8 1 1.7 1.4 2.8 1.4s2-.4 2.8-1.4"/></svg><h3>Moda feminina</h3><p>Peças pensadas para o guarda-roupa de quem gosta de se vestir bem.</p></li><li class="dif reveal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2c.6 4.6 2.2 6.2 6.8 6.8-4.6.6-6.2 2.2-6.8 6.8-.6-4.6-2.2-6.2-6.8-6.8 4.6-.6 6.2-2.2 6.8-6.8Z"/></svg><h3>Variedade de estilos</h3><p>Do look do dia ao vestido da festa, em cores e modelagens diferentes.</p></li><li class="dif reveal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19.6s-7.6-4.6-7.6-10a4.2 4.2 0 0 1 7.6-2.5 4.2 4.2 0 0 1 7.6 2.5c0 5.4-7.6 10-7.6 10Z"/></svg><h3>Atendimento próximo</h3><p>Uma equipe que conversa, sugere e ajuda a montar a combinação certa.</p></li><li class="dif reveal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10.2H9.6L5.6 19v-3.3H4Z"/><path d="M8 9.6h8M8 12.2h5"/></svg><h3>Facilidade de contato</h3><p>Fale com a loja pelo WhatsApp ou pelo Instagram, do jeito que preferir.</p></li><li class="dif reveal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.4V20h16V9.4"/><path d="M3 9.4 4.6 4h14.8L21 9.4Z"/><path d="M9.6 20v-5.4h4.8V20"/></svg><h3>Loja física em Mangabeira</h3><p>Um espaço rosa, com provadores e espelhos, esperando sua visita.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 08 LOCALIZAÇÃO -->
+<section class="sec sec--branco" id="loja">
+  <div class="wrap">
+    <div class="loja">
+      <div class="mirror reveal-img"><div class="m-in"><img src="assets/img/marca/fachada.webp" alt="Fachada rosa da Planet Moda em Mangabeira, com vitrine e letreiro" width="900" height="1200" loading="lazy" decoding="async" class=""></div></div>
+      <div class="loja-info">
+        <p class="kicker reveal">Loja física</p>
+        <h2 class="title reveal">Estamos esperando por você.</h2>
+        <a class="addr reveal" href="https://www.google.com/maps/place/Planet+Moda/@-7.1715643,-34.8394013,17z/data=!4m6!3m5!1s0x7acc34a961e02d7:0xbae361bf125ca856!8m2!3d-7.1721214!4d-34.8397317!16s%2Fg%2F11p76vpxb5" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s-6.6-6-6.6-11.1a6.6 6.6 0 0 1 13.2 0c0 5.1-6.6 11.1-6.6 11.1Z"/><circle cx="12" cy="10.2" r="2.4"/></svg><span>R. Josefa Taveira, 88 – Mangabeira<br>João Pessoa – PB, 58058-028</span></a>
+        <div class="hours reveal">
+          <div class="hours-h"><strong><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M12 7.2V12l3.2 2"/></svg> Horário de funcionamento</strong><span class="status" id="status">Confira o horário</span></div>
+          <ul id="hours"><li data-d="0"><span>Segunda</span><span>08:30 – 18:00</span></li><li data-d="1"><span>Terça</span><span>08:30 – 18:00</span></li><li data-d="2"><span>Quarta</span><span>08:30 – 18:00</span></li><li data-d="3"><span>Quinta</span><span>08:30 – 18:00</span></li><li data-d="4"><span>Sexta</span><span>08:30 – 18:00</span></li><li data-d="5"><span>Sábado</span><span>08:30 – 18:00</span></li><li data-d="6"><span>Domingo</span><span>09:00 – 13:00</span></li></ul>
+        </div>
+        <div class="btns reveal">
+          <a class="btn btn--rosa" href="https://www.google.com/maps/dir/?api=1&destination=-7.1721214,-34.8397317" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s-6.6-6-6.6-11.1a6.6 6.6 0 0 1 13.2 0c0 5.1-6.6 11.1-6.6 11.1Z"/><circle cx="12" cy="10.2" r="2.4"/></svg> Como chegar</a>
+          <a class="btn btn--linha-rosa" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Planet%20Moda%20e%20quero%20visitar%20a%20loja%20em%20Mangabeira." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Falar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="map reveal" id="mapa">
+      <div class="map-in">
+        <div class="map-stage">
+        <svg class="map-art" viewBox="0 0 1050 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="1050" height="400" fill="#FDE9EF"/>
+          <g fill="#FBD3DF"><rect x="20" y="20" width="170" height="110" rx="6"/><rect x="230" y="20" width="190" height="110" rx="6"/><rect x="460" y="20" width="150" height="110" rx="6"/><rect x="700" y="20" width="180" height="110" rx="6"/><rect x="920" y="20" width="120" height="110" rx="6"/><rect x="20" y="175" width="170" height="95" rx="6"/><rect x="230" y="175" width="190" height="95" rx="6"/><rect x="460" y="175" width="150" height="95" rx="6"/><rect x="700" y="175" width="110" height="95" rx="6"/><rect x="850" y="175" width="190" height="95" rx="6"/><rect x="20" y="315" width="170" height="80" rx="6"/><rect x="230" y="315" width="190" height="80" rx="6"/><rect x="460" y="315" width="150" height="80" rx="6"/><rect x="700" y="315" width="180" height="80" rx="6"/><rect x="920" y="315" width="120" height="80" rx="6"/></g>
+          <g stroke="#FDFDFD" stroke-linecap="round" fill="none">
+            <path d="M0 152H1050M0 292H1050" stroke-width="22"/>
+            <path d="M210 0V400M440 0V400M640 0V400M890 0V400" stroke-width="16"/>
+            <path d="M660 0C700 140 760 220 1050 260" stroke-width="10"/>
+          </g>
+          <text x="900" y="145" fill="#E77C9B" font-family="DM Sans,sans-serif" font-size="13" letter-spacing="2" text-anchor="middle">R. JOSEFA TAVEIRA</text>
+          <text x="330" y="285" fill="#E77C9B" font-family="DM Sans,sans-serif" font-size="13" letter-spacing="2" text-anchor="middle">MANGABEIRA</text>
+        </svg>
+        <span class="map-pin"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s-6.6-6-6.6-11.1a6.6 6.6 0 0 1 13.2 0c0 5.1-6.6 11.1-6.6 11.1Z"/><circle cx="12" cy="10.2" r="2.4"/></svg></span>
+        <iframe title="Mapa da Planet Moda em Mangabeira, João Pessoa" data-src="https://maps.google.com/maps?q=Planet%20Moda%2C%20R.%20Josefa%20Taveira%2C%2088%20-%20Mangabeira%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058058-028&ll=-7.1721214,-34.8397317&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="map-card">
+          <h3>Planet Moda</h3>
+          <p>R. Josefa Taveira, 88 – Mangabeira<br>João Pessoa – PB, 58058-028</p>
+          <div class="btns">
+            <a class="btn btn--rosa" href="https://www.google.com/maps/dir/?api=1&destination=-7.1721214,-34.8397317" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s-6.6-6-6.6-11.1a6.6 6.6 0 0 1 13.2 0c0 5.1-6.6 11.1-6.6 11.1Z"/><circle cx="12" cy="10.2" r="2.4"/></svg> Como chegar</a>
+            <a class="btn btn--linha-rosa" href="https://www.google.com/maps/place/Planet+Moda/@-7.1715643,-34.8394013,17z/data=!4m6!3m5!1s0x7acc34a961e02d7:0xbae361bf125ca856!8m2!3d-7.1721214!4d-34.8397317!16s%2Fg%2F11p76vpxb5" target="_blank" rel="noopener">Abrir no Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 CTA FINAL -->
+<section class="sec sec--rosa final" id="contato">
+  <div class="wrap">
+    <img class="logo-f reveal" src="assets/img/marca/logo-branco.png" alt="Planet Moda" width="932" height="602" loading="lazy">
+    <h2 class="title reveal">Apaixone-se pelo seu próximo look.</h2>
+    <p class="reveal">Descubra a Planet Moda e encontre novas formas de expressar seu estilo.</p>
+    <a class="btn btn--branco reveal" href="https://wa.me/5583987028876?text=Ol%C3%A1%2C%20Planet%20Moda%21%20Vim%20pelo%20site%20e%20quero%20ajuda%20para%20escolher%20meu%20pr%C3%B3ximo%20look." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg> Fale com a Planet Moda</a>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img class="logo-ft" src="assets/img/marca/logo-rosa.png" alt="Planet Moda" width="932" height="602" loading="lazy">
+        <div class="soc">
+          <a href="https://www.instagram.com/planetmoda_jp/" target="_blank" rel="noopener" aria-label="Instagram da Planet Moda"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener" aria-label="WhatsApp da Planet Moda"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Navegação</h4><ul><li><a href="#marca">A marca</a></li><li><a href="#estilo">Estilos</a></li><li><a href="#novidades">Novidades</a></li><li><a href="#gatas">Planet Gatas</a></li><li><a href="#loja">A loja</a></li></ul></div>
+      <div><h4>Contato</h4><ul>
+        <li><a href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener">WhatsApp (83) 98702-8876</a></li>
+        <li><a href="https://www.instagram.com/planetmoda_jp/" target="_blank" rel="noopener">Instagram @planetmoda_jp</a></li></ul></div>
+      <div><h4>Endereço</h4><ul>
+        <li><a href="https://www.google.com/maps/place/Planet+Moda/@-7.1715643,-34.8394013,17z/data=!4m6!3m5!1s0x7acc34a961e02d7:0xbae361bf125ca856!8m2!3d-7.1721214!4d-34.8397317!16s%2Fg%2F11p76vpxb5" target="_blank" rel="noopener">R. Josefa Taveira, 88<br>Mangabeira, João Pessoa – PB<br>58058-028</a></li>
+        <li>Seg. a sáb.: 08:30 – 18:00<br>Dom.: 09:00 – 13:00</li></ul></div>
+    </div>
+    <div class="ftr-bot"><span>© <span id="ano">2026</span> Planet Moda. Todos os direitos reservados.</span><span>Moda feminina em Mangabeira, João Pessoa</span></div>
+  </div>
+</footer>
+
+<a class="fab" id="fab" href="https://wa.me/5583987028876?text=Ol%C3%A1%21%20Conheci%20a%20Planet%20Moda%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20novidades." target="_blank" rel="noopener" aria-label="Falar com a Planet Moda pelo WhatsApp"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.7 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Z"/><path d="M8.6 7.9c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .6.4.8 1 1.5 1.8 2.1.6.4 1 .6 1.3.7.2.1.4 0 .6-.1l.6-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.3-.8 1.7-.6.4-1.3.6-2.2.4-1-.2-2.4-.8-3.9-2.1-1.7-1.5-2.4-3-2.6-3.8-.2-.9 0-1.7.5-2.4Z" fill="currentColor" stroke="none"/></svg></a>
+
+<script>
+(() => {
+  const d = document, body = d.body, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* intro do logo */
+  const intro = d.getElementById('intro');
+  const start = () => { intro.classList.add('out'); body.classList.remove('locked'); setTimeout(() => body.classList.add('ready'), 250); };
+  let seen = false; try { seen = sessionStorage.getItem('pm-intro') === '1'; sessionStorage.setItem('pm-intro','1'); } catch(e) {}
+  if (reduce || seen || location.hash) { intro.style.transition = 'none'; start(); }
+  else { setTimeout(start, 2700); intro.addEventListener('click', start, {once:true}); }
+
+  /* header + whatsapp flutuante */
+  const hdr = d.getElementById('hdr'), fab = d.getElementById('fab');
+  const onScroll = () => { const y = scrollY; hdr.classList.toggle('solid', y > 60); fab.classList.toggle('show', y > innerHeight * .6); };
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* menu mobile */
+  const burger = d.getElementById('burger'), drawer = d.getElementById('drawer');
+  const setNav = open => { body.classList.toggle('nav-open', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu'); body.style.overflow = open ? 'hidden' : ''; };
+  burger.addEventListener('click', () => setNav(!body.classList.contains('nav-open')));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setNav(false); });
+
+  /* revelações ao rolar */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px', threshold:.08});
+  d.querySelectorAll('.reveal,.reveal-img').forEach(el => io.observe(el));
+
+  /* carrosséis: carrega todas as fotos quando o carrossel se aproxima da tela */
+  const lio = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('img[data-src]').forEach(im => { im.src = im.dataset.src; im.removeAttribute('data-src'); }); lio.unobserve(e.target); } }), {rootMargin:'800px 0px'});
+  d.querySelectorAll('[data-carousel]').forEach(c => lio.observe(c));
+  /* carrosséis */
+  d.querySelectorAll('[data-carousel]').forEach(c => {
+    const t = c.querySelector('.track'), bar = c.querySelector('.car-bar span');
+    const step = () => t.querySelector('.slide').getBoundingClientRect().width + parseFloat(getComputedStyle(t).columnGap || 16);
+    const go = dir => {
+      const max = t.scrollWidth - t.clientWidth;
+      if (dir > 0 && t.scrollLeft >= max - 4) t.scrollTo({left:0});
+      else if (dir < 0 && t.scrollLeft <= 4) t.scrollTo({left:max});
+      else t.scrollBy({left: dir * step()});
+    };
+    c.querySelector('[data-prev]').addEventListener('click', () => go(-1));
+    c.querySelector('[data-next]').addEventListener('click', () => go(1));
+    const upd = () => { const max = t.scrollWidth - t.clientWidth, w = t.clientWidth / t.scrollWidth; bar.style.width = (w*100)+'%'; bar.style.left = (max > 0 ? t.scrollLeft / max * (1 - w) * 100 : 0) + '%'; };
+    t.addEventListener('scroll', upd, {passive:true}); addEventListener('resize', upd); upd();
+    t.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); go(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); } });
+    if (!reduce && !c.classList.contains('carousel--video')) {
+      let hold = false, vis = false;
+      ['pointerenter','focusin','touchstart'].forEach(ev => c.addEventListener(ev, () => hold = true, {passive:true}));
+      ['pointerleave','focusout'].forEach(ev => c.addEventListener(ev, () => hold = false));
+      new IntersectionObserver(es => vis = es[0].isIntersecting).observe(c);
+      setInterval(() => { if (vis && !hold && !d.hidden) go(1); }, 4200);
+    }
+  });
+
+  /* vídeos: tocam só quando visíveis */
+  const vids = [...d.querySelectorAll('.vcard video')];
+  const vio = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target, card = v.parentElement;
+    if (e.isIntersecting && !card.dataset.user && !reduce) { v.preload = 'auto'; v.play().then(() => card.classList.remove('paused')).catch(() => card.classList.add('paused')); }
+    else { v.pause(); card.classList.add('paused'); }
+  }), {threshold:.55});
+  vids.forEach(v => { v.parentElement.classList.add('paused'); vio.observe(v); });
+  d.querySelectorAll('[data-vtoggle]').forEach(b => b.addEventListener('click', () => {
+    const card = b.parentElement, v = card.querySelector('video');
+    if (v.paused) { delete card.dataset.user; v.play(); card.classList.remove('paused'); b.setAttribute('aria-label','Pausar vídeo'); }
+    else { card.dataset.user = '1'; v.pause(); card.classList.add('paused'); b.setAttribute('aria-label','Reproduzir vídeo'); }
+  }));
+
+  /* mapa: carrega o Google Maps; se o ambiente bloquear, fica o mapa ilustrado com os links */
+  const mapa = d.getElementById('mapa'), ifr = mapa.querySelector('iframe'); let blocked = false;
+  d.addEventListener('securitypolicyviolation', e => { if (/frame/.test(e.violatedDirective) && /google/.test(e.blockedURI)) { blocked = true; mapa.classList.remove('live'); ifr.remove(); } });
+  ifr.addEventListener('load', () => setTimeout(() => { if (!blocked && ifr.isConnected) mapa.classList.add('live'); }, 400));
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { ifr.src = ifr.dataset.src; o.disconnect(); } }, {rootMargin:'400px'}).observe(mapa);
+
+  /* horário: aberto agora? (horário de João Pessoa, UTC-3) */
+  const now = new Date(Date.now() + (new Date().getTimezoneOffset() - 180) * 60000);
+  const dow = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+  const idx = (dow + 6) % 7;
+  const [o, c] = dow === 0 ? [540, 780] : [510, 1080];
+  const li = d.querySelector(`#hours li[data-d="${idx}"]`); if (li) li.classList.add('today');
+  const st = d.getElementById('status'), open = mins >= o && mins < c;
+  st.textContent = open ? 'Aberto agora' : 'Fechado agora'; st.classList.toggle('open', open);
+  d.getElementById('ano').textContent = now.getFullYear();
+})();
+</script>
+</body>
+</html>
