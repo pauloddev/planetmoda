@@ -93,11 +93,8 @@ p{margin:0}
 .intro.out{clip-path:inset(0 0 100% 0);visibility:hidden}
 .intro-logo{position:relative;width:min(56vw,340px)}
 .intro-logo img{width:100%;opacity:0;transform:scale(.9);filter:blur(10px);animation:logoIn 1.6s var(--ease) .25s forwards}
-.intro-ring{position:absolute;inset:-22% -16%;}
-.intro-ring ellipse{fill:none;stroke:var(--branco);stroke-width:.6;stroke-dasharray:420;stroke-dashoffset:420;animation:ring 1.8s var(--ease) .5s forwards;opacity:.75}
 .intro-tag{position:absolute;left:0;right:0;bottom:-3.2rem;text-align:center;color:var(--branco);font-family:var(--serif);font-size:.9rem;letter-spacing:.17em;opacity:0;animation:fadeUp 1s var(--ease) 1.3s forwards}
 @keyframes logoIn{to{opacity:1;transform:none;filter:none}}
-@keyframes ring{to{stroke-dashoffset:0}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
 /* ---------- header ---------- */
@@ -377,7 +374,6 @@ p{margin:0}
 
 <div class="intro" id="intro" aria-hidden="true">
   <div class="intro-logo">
-    <svg class="intro-ring" viewBox="0 0 200 140" preserveAspectRatio="none"><ellipse cx="100" cy="70" rx="98" ry="68"/></svg>
     <img src="assets/img/marca/logo-branco.png" alt="" width="932" height="602">
     <p class="intro-tag">moda, personalidade e autenticidade</p>
   </div>
